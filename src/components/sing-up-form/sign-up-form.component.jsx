@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './sing-up-form.component'
+import './sign-up-form.scss'
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 import {
@@ -13,7 +13,7 @@ const defaultformFields = {
   confirmPassword: "",
 };
 
-const SingUpForm = () => {
+const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultformFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
@@ -104,4 +104,4 @@ const SingUpForm = () => {
   );
 };
 
-export default SingUpForm;
+export default SignUpForm;

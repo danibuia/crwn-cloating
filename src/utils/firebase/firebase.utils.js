@@ -5,6 +5,7 @@ import {
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -21,6 +22,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+// eslint-disable-next-line
 const firebaseApp = initializeApp(firebaseConfig);
 const googleprovider = new GoogleAuthProvider();
 googleprovider.setCustomParameters({
@@ -29,7 +31,7 @@ googleprovider.setCustomParameters({
 
 export const auth = getAuth();
 
-export const singInWithGooglePopup = () =>
+export const signInWithGooglePopup = () =>
   signInWithPopup(auth, googleprovider);
 
 export const signInWithGoogleRedirect = () =>
@@ -68,4 +70,9 @@ export const createUserDocumentFromAuth = async (
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await createAuthUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
 };
