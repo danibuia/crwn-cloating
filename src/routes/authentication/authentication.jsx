@@ -3,9 +3,9 @@ import {
   createUserDocumentFromAuth,
   singInWithGooglePopup,
 } from "../../utils/firebase/firebase.utils";
-import SingUpForm from "../../components/sing-up/sing-up-form.component";
+import SingUpForm from "../../components/sing-up-form/sing-up-form.component";
 
-const SingIn = () => {
+const Authentication = () => {
  
 
   const logGoogleUser = async () => {
@@ -22,4 +22,4 @@ const SingIn = () => {
   );
 };
 
-export default SingIn;
+export default Authentication;

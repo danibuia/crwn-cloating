@@ -1,8 +1,7 @@
 import Home from "./routes/home/home.component";
-import SingIn from "./routes/sing-in/sing-in.component";
+import Authentication from "./routes/authentication/authentication";
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./routes/home/navigation/navigation.component";
-
+import Navigation from "./routes/navigation/navigation.component";
 const Shop = () => {
   return <h1> neata</h1>;
 };
@@ -13,7 +12,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
-        <Route path="singIn" element={<SingIn />} />
+        <Route path="auth" element={<Authentication />} />
       </Route>
     </Routes>
   );

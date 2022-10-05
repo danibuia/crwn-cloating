@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./sign-up-form.scss";
+import './sing-up-form.component'
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 import {
@@ -98,7 +98,7 @@ const SingUpForm = () => {
             value: confirmPassword,
           }}
         />
-        <Button  type="submit">Sing In</Button>
+        <Button type="submit">Sing In</Button>
       </form>
     </div>
   );
